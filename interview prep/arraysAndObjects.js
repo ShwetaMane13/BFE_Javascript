@@ -15,4 +15,35 @@ const printSum = (arr) => {
 
 console.log(printSum(arrayOne));
 
+// 1. The Swapping Saga:
+// Question: How can you swap the values of two variables without using a temporary variable?
 
+let a = 10, b = 11;
+[a, b] = [b, a]; //destructuring assignment
+
+
+
+
+
+// 2. Object Overhaul:
+// Question: Explain the process of cloning an object in JavaScript.
+
+const originalObject = {one: 1, two: 2}
+const clonedObject = {...originalObject}
+
+//why do we need to clone an object though and what is a shallow copy and a deep copy?
+
+//there are three ways the spread operator, Object.assign and JSON.parse(). 
+//last one is a bad practice as it does not work with functions, symbol and undefined values.  
+//When you have a function, symbol, or undefined value, it will return an empty key-value pair and skip it. 
+//also it changes NaN and infinity to null. this can break your code. 
+
+
+
+
+
+// 3. Array Amalgamation:
+// Question: How do you eliminate duplicates from an array?
+
+const arrayWithDupes = [1, 2, 3, 1, 2, 4];
+const noDupesArray = [...new Set(arrayWithDupes)]; //Duplicates vanish, leaving a pristine array. (i love how it is worded lol)
