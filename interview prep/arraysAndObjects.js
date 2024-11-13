@@ -47,3 +47,37 @@ const clonedObject = {...originalObject}
 
 const arrayWithDupes = [1, 2, 3, 1, 2, 4];
 const noDupesArray = [...new Set(arrayWithDupes)]; //Duplicates vanish, leaving a pristine array. (i love how it is worded lol)
+
+//https://dev.to/krishnapankhania/mastering-javascript-10-tricky-interview-questions-on-arrays-and-objects-205o today will finish
+// the rest of the problems from this site.
+
+// 4. The Palindrome Puzzle:
+// Question: Write a function to determine if a string is a palindrome.
+
+function isPalindrome(str){
+    const reversed = str.split('').reverse().join('');
+    return str === reversed;
+}
+
+// 5. Object Inquiry:
+// Question: How can you check if an object contains a specific property?
+
+const myObject = {name: 'JavaScript', age: 25};
+const hasProperty = 'age' in myObject; //hasProperty value will be true
+console.log("here", myObject.hasOwnProperty('age')); //we can use this as well 
+// we can use this inside for loop i.e. for in loop.
+
+
+// 6. Object Fusion:
+// Question: Merge two objects into one.
+
+const obj1 = { a: 1, b: 2 };
+const obj2 = { c: 3, d: 4 };
+const fusedObject = {...obj1, ...obj2};
+
+// 9. The Filtering Feat:
+// Question: Remove falsy values from an array.
+
+const questionableArray = [0, false, '', null, undefined, 42];
+const truthArray = questionableArray.filter(Boolean);
+console.log("truthArray", truthArray); // False values eliminated, leaving truth behind.
