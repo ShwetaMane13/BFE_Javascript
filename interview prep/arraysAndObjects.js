@@ -81,3 +81,23 @@ const fusedObject = {...obj1, ...obj2};
 const questionableArray = [0, false, '', null, undefined, 42];
 const truthArray = questionableArray.filter(Boolean);
 console.log("truthArray", truthArray); // False values eliminated, leaving truth behind.
+
+
+// Object.entries() - returns an array of arrays that each contain a key/value pair present in the object:
+
+const person = {
+    firstName: "John",
+    lastName: "Doe",
+    age: 50,
+    eyeColor: "blue"
+}
+
+let text = Object.entries(person);
+console.log("text", text);
+/* [
+    [ 'firstName', 'John' ],
+    [ 'lastName', 'Doe' ],
+    [ 'age', 50 ],
+    [ 'eyeColor', 'blue' ]
+  ]
+*/
