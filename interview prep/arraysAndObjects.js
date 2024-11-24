@@ -190,3 +190,8 @@ for(let x in person){
 }
 console.log("txt", txt);
 // output: JohnDoe50blue
+
+let newObj = {name: "Shweta"};
+let newObj2 = {...newObj};
+newObj2.name = "Riddhi";
+console.log(newObj.name);
