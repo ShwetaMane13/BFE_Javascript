@@ -75,3 +75,10 @@ class MyPromise {
     return this.then(null, onFailure);
   }
 }
+
+const result = new MyPromise((resolve, reject) => {
+  setTimeout(() => console.log("Time is out"), 3000);
+  resolve("This promise is now resolved");
+});
+
+result.then((res) => console.log(res));
