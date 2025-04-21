@@ -4,24 +4,24 @@
 
 const mySet = new Set([1, 2, 1, 3, 4, 4, 5, 6, 6, 6, 7, 8]);
 
-// console.log("mySet", mySet); // mySet Set(8) { 1, 2, 3, 4, 5, 6, 7, 8 }
-// console.log("mySetInArray", [...mySet]); // mySet [1, 2, 3, 4, 5, 6, 7, 8]
+console.log("mySet", mySet); // mySet Set(8) { 1, 2, 3, 4, 5, 6, 7, 8 }
+console.log("mySetInArray", [...mySet]); // mySet [1, 2, 3, 4, 5, 6, 7, 8]
 
-// mySet.add(9); // adds a new element to the set
-// console.log(mySet); // Set(9) { 1, 2, 3, 4, 5, 6, 7, 8, 9 }
-// console.log(mySet.has(8)); //true // checks if the element is present in the set
-// mySet.delete(9); // deletes the given element from the set
-// mySet.delete(10); // nothing happened. 10 is not present in the set.
-// console.log(mySet); // Set(8) { 1, 2, 3, 4, 5, 6, 7, 8 }
-// console.log(mySet.size); // gives the number of total unique elements
-// mySet.clear(); // removes all values
-// console.log(mySet); // Set(0) {}
+mySet.add(9); // adds a new element to the set
+console.log(mySet); // Set(9) { 1, 2, 3, 4, 5, 6, 7, 8, 9 }
+console.log(mySet.has(8)); //true // checks if the element is present in the set
+mySet.delete(9); // deletes the given element from the set
+mySet.delete(10); // nothing happened. 10 is not present in the set.
+console.log(mySet); // Set(8) { 1, 2, 3, 4, 5, 6, 7, 8 }
+console.log(mySet.size); // gives the number of total unique elements
+mySet.clear(); // removes all values
+console.log(mySet); // Set(0) {}
 
 // real world example
 
 const users = ["A", "B", "A", "C", "B"];
 const uniqueUsers = [...new Set(users)];
-// console.log(uniqueUsers); // [ 'A', 'B', 'C' ]
+console.log(uniqueUsers); // [ 'A', 'B', 'C' ]
 
 // Map - A collection of key value pairs, where keys can be any type(not just strings like objects)
 
