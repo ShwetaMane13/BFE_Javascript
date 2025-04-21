@@ -61,3 +61,14 @@ function deepEqual(a, b) {
 }
 
 console.log(deepEqual({ a: { b: 2 } }, { a: { b: 2 } }));
+
+const newObj = { a: "1", b: "2", c: "3" };
+const keys = Object.keys(newObj);
+
+for (let ele in newObj) {
+  console.log("ele", newObj[ele]);
+}
+
+for (let key of keys) {
+  console.log("keys", newObj[key]);
+}
