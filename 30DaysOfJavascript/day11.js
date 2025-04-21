@@ -114,12 +114,12 @@ const person = {
   },
 };
 
-setTimeout(person.greet, 1000); // ❓What will this log? Output: Hello, I'm undefined
+setTimeout(person.greet, 1000); // What will this log? Output: Hello, I'm undefined
 
-setTimeout(person.greet.bind(person), 2000); // ❓And what about this? Output: Hello, I'm Shweta
+setTimeout(person.greet.bind(person), 2000); // And what about this? Output: Hello, I'm Shweta
 
 const greetFn = person.greet;
-setTimeout(greetFn.bind({ name: "Mona" }), 3000); //  Output: Hello, I'm Mona
+setTimeout(greetFn.bind({ name: "Mona" }), 3000); // Output: Hello, I'm Mona
 
 
 // This is super useful when you're working with event handlers or callbacks, 
