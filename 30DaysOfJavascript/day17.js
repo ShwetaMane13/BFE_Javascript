@@ -16,6 +16,26 @@ console.log(doubledAgain); // [2, 4, 6]
 // so if you need a new transformed array, go with map
 // if you are doing just something per item (like logging or mutating external stuff), go with forEach
 
+// quick challenge
+const capitalizeAndSayHello = (arr) => {
+  const answer = arr.map((ele) => {
+    ele = ele.split("");
+    ele[0] = ele[0].toUpperCase();
+    return `Hello, ${ele.join("")}`;
+  });
+
+  return answer;
+};
+
+// shorter version
+const capitalizeAndSayHelloShorter = (arr) => {
+  return arr.map((ele) => `Hello, ${ele[0].toUpperCase()}${ele.slice(1)}`);
+};
+
+console.log(capitalizeAndSayHelloShorter(["shweta", "vikram", "riddhi"]));
+
+console.log(capitalizeAndSayHello(["shweta", "vikram", "riddhi"]));
+
 // DSA - Selection Sort
 
 const selectionSort = (arr) => {
