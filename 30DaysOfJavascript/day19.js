@@ -49,17 +49,33 @@ const numsRev = [1, 2, 3, 4, 5];
 const reversedNums = numsRev.toReversed();
 console.log(reversedNums); // output: [ 5, 4, 3, 2, 1 ]
 
-// with - creates a copy of the array, but replaces one value at a given index 
+// with - creates a copy of the array, but replaces one value at a given index
 // does not mutate the original array
 
 //array.with(index, newValue);
 
 const fruits = ["apple", "banana", "cherry"];
 const newFruits = fruits.with(1, "orange");
-console.log(newFruits) // output: [ 'apple', 'orange', 'cherry' ]
+console.log(newFruits); // output: [ 'apple', 'orange', 'cherry' ]
 
 // in short
 // groupby - groups items by property
 // toSorted - new sorted array without touching the original
 // toReversed - new reversed array without touching the original
 // with - copy array with one item replaced
+
+// challenge
+const fruitsArray = [
+  "apple",
+  "banana",
+  "cherry",
+  "apricot",
+  "blueberry",
+  "avocado",
+];
+const groupByFirstLetter = groupBy(fruitsArray, (fruit) => fruit[0]);
+console.log(groupByFirstLetter);
+
+const words = ["cat", "apple", "bat", "banana", "cherry", "dog", "ant"];
+const groupByWordLength = groupBy(words, (word) => word.length);
+console.log(groupByWordLength);
