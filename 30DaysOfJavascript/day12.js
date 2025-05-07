@@ -108,3 +108,26 @@ const isAnagramOptimized = (str1, str2) => {
 
 // O(n) time and space complexity
 console.log(isAnagramOptimized("hello", "bello")); // false
+
+const areAnagrams = (str1, str2) => {
+  if (str1.length !== str2.length) return false;
+
+  str1 = str1.toLowerCase();
+  str2 = str2.toLowerCase();
+
+  const map = new Map();
+
+  for (let char of str1) {
+    map.set(char, (map.get(char) || 0) + 1);
+  }
+
+  for (let char of str2) {
+    if (!map.has(char)) return false;
+    map.set(char, map.get(char) - 1);
+    if (map.get(char) < 0) return false;
+  }
+
+  return true;
+};
+
+console.log(areAnagrams("Listen", "Silent"));
