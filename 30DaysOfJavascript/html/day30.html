@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <h1>Elite Frontend Week</h1>
+
+    <style>
+      .tab-btn {
+        padding: 8px 16px;
+        cursor: pointer;
+      }
+      .tab-btn.active {
+        background-color: #444;
+        color: white;
+      }
+      .tab-pane {
+        display: none;
+        margin-top: 20px;
+      }
+      .tab-pane.active {
+        display: block;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h3>Tabs Component</h3>
+
+    <div class="tabs">
+      <button class="tab-btn active" data-tab="home">Home</button>
+      <button class="tab-btn" data-tab="about">About</button>
+      <button class="tab-btn" data-tab="contact">Contact</button>
+    </div>
+
+    <div class="tab-content">
+      <div class="tab-pane active" id="home">Welcome to the homepage</div>
+      <div class="tab-pane" id="about">Here's some information about us.</div>
+      <div class="tab-pane" id="contact">Contact us at contact@gmail.com</div>
+    </div>
+    <script src="../day30.js"></script>
+  </body>
+</html>
